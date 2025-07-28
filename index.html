@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ko Taku Reo 3D Printing Order</title>
   <link rel="icon" href="https://kotakureo.school.nz/favicon.ico" />
+
+  <!-- Google Font: Noto Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --green: #006747;
@@ -12,7 +16,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Noto Sans', sans-serif;
       background-color: var(--light-green);
       margin: 0;
       padding: 0;
@@ -24,6 +28,19 @@
       color: white;
       padding: 1em;
       text-align: center;
+    }
+
+    header img {
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    header h2 {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      font-size: 1.8em;
     }
 
     main {
@@ -53,6 +70,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 1em;
+      font-family: 'Noto Sans', sans-serif;
     }
 
     button {
@@ -83,6 +101,7 @@
 <body>
 
   <header>
+    <img src="https://kotakureo.school.nz/wp-content/uploads/2020/10/kotakureo-white.svg" alt="Ko Taku Reo Logo">
     <h2>Ko Taku Reo 3D Printing</h2>
   </header>
 
@@ -115,7 +134,6 @@
   <script>
     document.getElementById('orderForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      // Normally you'd send to a server or API here
       document.getElementById('successMessage').style.display = 'block';
       this.reset();
     });
