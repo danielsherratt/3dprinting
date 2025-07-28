@@ -63,7 +63,7 @@
       font-weight: bold;
     }
 
-    input, select, textarea {
+    input, select {
       width: 100%;
       padding: 0.8em;
       margin-top: 0.3em;
@@ -101,7 +101,7 @@
 <body>
 
   <header>
-    <img src="https://kotakureo.school.nz/wp-content/uploads/2020/10/kotakureo-white.svg" alt="Ko Taku Reo Logo">
+    <img src="https://kotakureo.school.nz/img/logo.svg" alt="Ko Taku Reo Logo">
     <h2>Ko Taku Reo 3D Printing</h2>
   </header>
 
@@ -117,8 +117,20 @@
       <label for="school">Campus / Location</label>
       <input type="text" id="school" required>
 
-      <label for="details">Print Description</label>
-      <textarea id="details" rows="4" placeholder="e.g., Pencil holder, 100mm, green PLA" required></textarea>
+      <label for="colour">Preferred Colour</label>
+      <select id="colour" required>
+        <option value="">Select a colour</option>
+        <option>Black</option>
+        <option>White</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>Red</option>
+        <option>Yellow</option>
+        <option>Transparent</option>
+      </select>
+
+      <label for="date">Preferred Completion Date</label>
+      <input type="date" id="date" required>
 
       <label for="file">Upload STL File</label>
       <input type="file" id="file" accept=".stl" required>
